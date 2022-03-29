@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="rootScene" extends="Scene">
+	<script type="text/brightscript" uri="rootScene.brs"/>
+	<script type="text/brightscript" uri="sceneStack.brs"/>
+	<script type="text/brightscript" uri="initConfig.brs"/>
+	<script type="text/brightscript" uri="componentConfig.brs"/>
+	<interface>
+        <field id="router" type="assocarray" onChange="navToScene" alwaysNotify="true"/>
+    </interface>
+	<children>
+		<group id="scenes"/>
+	</children>
+</component>

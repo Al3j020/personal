@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="buttonBar" extends="Group"> 
+<script type="text/brightscript" uri="buttonBar.brs"/>
+<interface>
+    <field id="itemContent" type="node" onChange="onItemContent"/>
+    <field id="focusPercent" type="float" onChange="onFocusPercent"/>
+</interface>
+	<children>
+        <layoutGroup
+            id="layoutGroup"
+            layoutDirection="vert"
+            itemSpacings="[20]">
+            <label
+                id="label"
+                font="font:LargeBoldSystemFont"
+                width="150"
+                height="50"
+                horizAlign="center"
+                color="0x7C7C7C"/>
+            <rectangle
+                id="rectangle"
+                width="150"
+                height="10"
+                color="0x2E7AFF"
+                visible="false"/>
+        </layoutGroup>
+  	</children>
+</component>

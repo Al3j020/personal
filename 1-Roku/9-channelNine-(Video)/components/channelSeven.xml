@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="channelSeven" extends="Scene"> 
+  <script type="text/brightscript" uri="channelSeven.brs"/>  
+    <children>    
+      <video
+        id="video"
+        translation="[0, 0]"
+        width="640"
+        height="360"/>
+      <ButtonGroup
+        id="buttonGroup"
+        translation="[700, 160]"
+        itemSpacings="[5]"
+        iconUri=""
+        focusedIconUri=""
+        minWidth="100"
+        maxWidth="200"
+        buttonHeight="40"/>
+    </children>
+</component>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="MainScene" extends="Scene">
+	<script type="text/brightscript" uri="MainScene.brs"/>
+	<script type="text/brightscript" uri="screenStack.brs"/>
+	<script type="text/brightscript" uri="appConfig.brs"/>
+</component>

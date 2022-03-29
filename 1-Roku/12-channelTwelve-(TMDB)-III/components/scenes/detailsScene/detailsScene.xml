@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="detailsScene" extends="baseGroup">
+	<script type="text/brightscript" uri="detailsScene.brs"/>
+</component>

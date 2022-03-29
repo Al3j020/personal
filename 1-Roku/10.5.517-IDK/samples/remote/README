@@ -1,0 +1,15 @@
+Copyright 2021 Roku, Inc.  All rights reserved.
+
+This sample channel demonstrates:
+
++ How to get remote input events.
+
+Some notes:
+
++ The class RemoteControl is reusable but its implementation is not complicated
+  at all.  The idea is that, once you have a context, you can check to see if
+  input events are available.  For platforms that support IDK, they will not
+  support motion and gaming remotes.
+
++ Make sure you collect all events.  For example, on single press you'll get
+  two events for key down and key up.

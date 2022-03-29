@@ -1,0 +1,92 @@
+Copyright 2021 Roku, Inc.  All rights reserved.
+
+This sample channel demonstrates:
+
++ How to paint to screen using GLES2 libraries in IDK.
+
++ How to skip most of the fun bits of writing your own Makefile and simplify
+  dependency tracking using rules.mk.  Define a few variables and you are good
+  to go!
+
++ How to create a 1080p framebuffer instead of default 720p resolution.
+
+Some notes in no particular order:
+
++ Place sources under directory sources/ which rules.mk uses to search for
+  things to compile.  You can set variable PATH_SOURCE to another directory
+  to override the default.
+
++ Similarly, the launch BrightScript and other resources your application wants
+  to use can live under assets/ and it'll get copied to the right location.
+  Override default location with PATH_ASSETS.
+
++ You can edit header file startfield.h to tweak the simulation, add more stars
+  or make them move faster, etc.  This sample application renders color cycling
+  animation to textures, and use the animated textures to draw stars moving
+  towards user.  It also performs additional post processing to intermediate
+  framebuffer.
+
++ See ctpl_stl.h for thread queue implementation.  I use it everywhere to
+  serialize operations and make sure GL context creation and drawing calls
+  always happen on the same thread.
+
++ You'll see a warning when compiling, from spng.c.  This is because the Zlib
+  that comes with IDK is too old.  You can always build your own, of course.
+
++ This sample uses unmodified open source libraries CTPL, GLM, and libspng;
+  please see LICENSE-* texts for more information.  You can learn more about
+  each library:
+
+  CTPL, C++ Thread Pool Library: https://github.com/vit-vit/ctpl
+  GLM, OpenGL Mathematics: https://github.com/g-truc/glm
+  libspng, Simple PNG: https://github.com/randy408/libspng
+
++ To figure out resolution of display attached to your Roku device, we use
+  BrightScript component roDeviceInfo.  Once we collect the information we
+  want, we can pass that information as part of the launch parameters.  see
+  main.brs for more details.
+
++ Some of the GL calls will set default values and are not required.  They are
+  there to show you that you can call them.  In fact, that is the reason why
+  this sample isn't just showing a textured triangle to call it a day.  It tries
+  to show that you can use your Roku device to do interesting things, in
+  addition to watching video.
+
++ This sample channel has no audio/video playback, so screen saver will kick in
+  (the blank screen).  For a graphics demo that is not desirable, so to prevent
+  blank screensaver from starting, we need entry "screensaver_disabled=1" in
+  manifest file.
+
++ Roku devices are designed to be connected to the Internet always; after all,
+  its job is to stream content from the Internet.  When it detects that you have
+  no Internet connection, it will present a dialog for you to change your
+  network settings.  If Internet connection is not a requirement for you, you
+  can suppress this dialog by adding "suppress_poor_connection_hud=1" to your
+  manifest.
+
++ For GLSL pixel shaders, you must define mediump for floats.  By default highp
+  is in effect across all shader stages, but Roku's GL driver cannot handle
+  highp precision in fragment shader.
+
++ GLM provides its matrix as column-major floats via glm::value_ptr(), and
+  glUniformMatrix4fv() is supposed to accept column-major input.  I can see
+  the data from glm::value_ptr() is indeed column-major by translating and
+  identity matrix and observe the output floats.  However, GL driver from
+  hardware vendor doesn't seem to like output of glm::value_ptr() unless I
+  transpose the matrix.
+
++ You must set the texture filtering parameters, otherwise texture will not
+  show up.
+
++ This sample channel is overdrawing more than it should by having translucent
+  textures and not using depth buffer at all.  You will write better code, so
+  this isn't a concern. :)  It is good to know that your little Roku box can
+  push a lot of pixels, no?  Still, be mindful of what you are doing, and try
+  not to peg the CPU all the time, in case if operating system throttling you
+  because device is too hot.
+
++ See screen.cpp for code fragment that defines the data structure you need
+  to call eglCreateWindowSurface() with to use higher-resolution framebuffer.
+  Without manifest entry ui_resolutions=fhd, your channel will get a 720p
+  framebuffer.  Similarly, passing null for native window will also give you
+  720p framebuffer.

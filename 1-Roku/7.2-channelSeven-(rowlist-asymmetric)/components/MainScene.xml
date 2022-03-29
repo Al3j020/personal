@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="MainScene" extends="Scene"> 
+<script type="text/brightscript" uri="MainScene.brs"/>
+	<children>
+		<rowList
+			id = "rowlist"
+			translation="[130, 50]"
+			itemSize="[1800, 0]"
+			numRows="4"
+			itemComponentName="baseItem"
+			rowTitleComponentName="rowTitleComponent"
+			rowLabelOffset="[[0,0],[0, 0],[0,0]]"
+			showRowLabel="[false, true, false]"
+			rowItemSpacing="[[20, 0]]"
+			focusXOffset="[0, 340, 0]"
+			rowItemSize="[[320, 180], [480, 270], [640, 360]]"
+			rowHeights="[190, 600, 380]"
+			rowSpacings="[20, 40, 60]"
+			drawFocusFeedback="true"
+			vertFocusAnimationStyle="floatingFocus"/>
+			<!--itemSize[0] is ignored-->
+  	</children>
+</component>

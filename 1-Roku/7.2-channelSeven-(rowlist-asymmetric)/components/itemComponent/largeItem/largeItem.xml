@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="largeItem" extends="Group"> 
+<script type="text/brightscript" uri="largeItem.brs"/>
+<interface>
+    <field id="itemContent" type="node" onChange="onItemContent"/>
+    <field id="focusPercent" type="float" onChange="onFocusPercent"/>
+</interface>
+	<children>
+        <poster
+            id="poster" 
+            loadDisplayMode="scaleToFit"
+            width="640"
+            height="360"/>
+  	</children>
+</component>

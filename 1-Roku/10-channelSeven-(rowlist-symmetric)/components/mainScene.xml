@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="mainScene" extends="Scene">
+<script type="text/brightscript" uri="mainScene.brs"/>
+	<children>
+		<rowList
+			id = "rowlist"
+			translation="[50, 50]"
+			rowTitleComponentName="rowItem"
+			itemComponentName="mediumItem"
+			itemSize="[1920, 270]"
+			drawFocusFeedback="true"
+			rowItemSize="[[480, 270]]"
+			rowItemSpacing="[[50, 0]]"
+			rowHeights="[560, 560, 560, 560]"
+			rowFocusAnimationStyle="floatingFocus"
+			numRows="3"
+			itemSpacing="[0, 20]"
+			showRowLabel="[true]"
+			rowLabelOffset="[[0, 20]]"/>
+			
+			<!--  -->
+			<!--  -->
+			<!--numRows isn't a field from rowlist...-->
+	</children>
+</component>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="MainScene" extends="Scene"> 
+<script type="text/brightscript" uri="MainScene.brs"/>
+	<children>
+		<rowList
+			id = "rowlist"
+			translation="[360, 50]"
+			numRows="1"
+			itemComponentName="buttonBar"
+			itemSize="[1200, 100]"
+			rowItemSize="[[200, 100]]"
+			drawFocusFeedback="false"/>
+  	</children>
+</component>

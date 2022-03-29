@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="MainScene" extends="Scene"> 
+<script type="text/brightscript" uri="MainScene.brs"/>
+	<children>
+		<markupList
+			id="markupList" 
+			translation="[50, 50]"
+			itemSize="[270, 480]" 
+			numRows="4"
+			itemComponentName="itemComponent" 
+			itemSpacing="[0, 10]"
+			drawFocusFeedback="false"/>
+	</children>
+</component>

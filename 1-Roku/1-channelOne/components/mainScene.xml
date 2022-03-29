@@ -1,0 +1,25 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<component name="MainScene" extends = "Scene">
+    <script type="text/brightscript" uri="mainScene.brs"/>
+    <children>
+        <button
+            id="button"
+            translation="[100, 10]"
+            text="buttonFocused"
+            minWidth="300"
+            height="64"/>
+        <rectangle
+            id="rectangleOne"
+            translation="[100, 200]"
+            width="200"
+            height="200"/>
+        <rectangle
+            id="rectangleTwo"
+            translation="[350, 200]"
+            width="300"
+            height="300"/>
+        <miniKeyboard
+            id="minikeyboard"
+            translation="[1000, 300]"/>
+    </children>
+</component>

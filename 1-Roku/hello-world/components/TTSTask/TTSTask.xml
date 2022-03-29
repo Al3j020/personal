@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name = "TTSTask" extends = "Task" >
+    <script type="text/brightscript" uri="TTSTask.brs"/>
+    <interface>
+        <field id = "textToSpeech" type = "string"/>
+        <field id = "node" type = "node"/>
+    </interface>
+</component>

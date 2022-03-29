@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="panelItem" extends="Group"> 
+    <script type="text/brightscript" uri="panelItem.brs"/>
+    <interface>
+        <field id="itemContent" type="node" onChange="onItemContent"/>
+        <field id="focusPercent" type="float" onChange="onFocusPercent"/>
+    </interface>
+	<children>
+        <layoutGroup
+            id="layoutGroup"
+            layoutDirection="horiz"
+            itemSpacings="20">
+            <rectangle
+                id="rectangle" 
+                width="10"
+                height="40"
+                visible="false"
+                color="0x0051FF"/>
+            <label
+                id="label"
+                width="200"
+                height="40"
+                horizAlign="left"
+                vertAlign="center"
+                font="font:LargeBoldSystemFont"/>
+        </layoutGroup>
+        
+  	</children>
+</component>

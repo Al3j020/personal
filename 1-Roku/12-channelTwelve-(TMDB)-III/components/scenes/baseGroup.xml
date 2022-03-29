@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="baseGroup" extends="group">
+    <interface>
+        <field id="fetcher"     type="node"/>
+        <field id="components"  type="assocarray"   onChange="addComponents"/>
+        <field id="content"     type="node"         onChange="addContent"/>
+    </interface>
+</component>

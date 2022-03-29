@@ -1,0 +1,21 @@
+Copyright 2021 Roku, Inc.  All rights reserved.
+
+This sample channel demonstrates:
+
++ How to decode a MP3 file into PCM samples.  Then, use Roku's sound effect
+  interface to play back music to audio output.
+
+Some notes in no particular order:
+
++ This sample uses unmodified open source library minimp3; please see
+  LICENSE-minimp3 text for more information.  You can learn more about it:
+
+    https://github.com/lieff/minimp3
+
++ For sure this sample only shows that PCM playback works and I am days before
+  my deadline.  Generally this interface is for short clips but you can use it
+  to play music for hours if you need to.
+
++ It is also worth noting that through this interface it is possible to control
+  maximum audio render delay, useful when you need to control rendering delay
+  for synchronization.

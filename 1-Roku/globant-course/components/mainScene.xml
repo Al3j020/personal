@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="mainScene" extends="Scene">
+	<interface>
+		<field id="ready" type="boolean" value="false"/>
+		<function name="onReady" />
+	</interface>
+	<script type="text/brightscript" uri="mainScene.brs"/>
+		<children>
+		</children>
+</component>

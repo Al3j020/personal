@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="fetcher" extends="group">
+	<script type="text/brightscript" uri="fetcher.brs"/>
+	<interface>
+        <function name="fetchTrending"/>
+        <function name="fetchTVShows"/>
+		<function name="fetchRecomendations"/>
+		<function name="fetchProviders"/>
+	</interface>
+</component>

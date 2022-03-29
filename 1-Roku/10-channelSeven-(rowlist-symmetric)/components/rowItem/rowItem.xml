@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="rowItem" extends="Group">
+<script type="text/brightscript" uri="rowItem.brs"/>
+<interface>
+    <field id="content" type="node" onChange="onContentChange"/>
+</interface>
+	<children>
+        <rectangle
+            id="rectangle"
+            width="1920"
+            height="270"
+            color="#0b172b"/>
+        <button
+            id="button"
+            text="[unfocus]"
+            minWidth="270"
+            maxWidth="350"
+            height="64"
+            iconUri=""
+            focusedIconUri=""/>
+    </children>
+</component>

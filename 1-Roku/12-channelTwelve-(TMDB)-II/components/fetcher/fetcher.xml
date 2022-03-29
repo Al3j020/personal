@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="fetcher" extends="group">
+	<script type="text/brightscript" uri="fetcher.brs"/>
+	<interface>
+		<function name="fetchMoviesByGenre"/>
+		<function name="fetchTVShowsByGenre"/>
+	</interface>
+</component>

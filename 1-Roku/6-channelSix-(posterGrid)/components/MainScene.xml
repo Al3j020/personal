@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="MainScene" extends="Scene"> 
+<script type="text/brightscript" uri="MainScene.brs"/>
+	<children>
+		<Label
+			id="titleLabel"
+			width="1020"
+			translation="[130,170]"/>
+        <Label
+	        id="descriptionLabel"
+	        wrap="true"
+	        width="1020"
+	        numLines="3"
+			translation="[130,220]"/>
+		<posterGrid 
+			id = "posterGrid" 
+			translation="[130, 400]"
+			basePosterSize = "[320, 180]" 
+			caption1NumLines = "1" 
+			numColumns = "4" 
+			numRows = "1" 
+			itemSpacing = "[20, 20]"/>
+  	</children>
+</component>
