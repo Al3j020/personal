@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="ProfileView" extends="Group">
+
+        <script type="text/brightscript" uri="profileView.brs" />
+        <script type="text/brightscript" uri="../../common/app.brs" /> 
+        <script type="text/brightscript" uri="../../common/utils.brs" /> 
+
+        <children>
+                <Rectangle
+                        id="rectangle"
+                        color="#000000"
+                        width="1920"
+                        height="1080"
+                        translation="[0,0]" />
+                <Label
+                        id="title"
+                        text="¿Quién quiere ver Netflix?"
+                        font="font:MediumBoldSystemFont"
+                        translation="[750,200]"/>
+                
+                <RowList 
+                        id="rowList"
+                        numRows = "1"
+                        itemComponentName="ProfileItem"
+                        showRowLabel="[false]"
+                        drawFocusFeedback="false"/>
+                
+        </children>
+</component>

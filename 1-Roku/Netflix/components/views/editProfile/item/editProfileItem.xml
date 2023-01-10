@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="editProfileItem" extends="Group">
+
+     <interface>
+        <field id="itemContent" type="node" onChange="onItemContentChanged"/>
+        <field id="focusPercent" type="float" onChange="onUserHasFocus"/>
+       
+     </interface>
+
+    <script type="text/brightscript" uri="editProfileItem.brs"/> 
+    
+    <children>
+
+        
+        <LayoutGroup
+            id="layoutGroup"
+            translation="[250,0]"
+            layoutDirection = "vert"
+            horizAlignment= "center"
+            vertAlignment = "top"
+            itemSpacings="[40]">
+
+            <Poster 
+                id="itemPoster"/>
+
+            <Label 
+                id="title"
+                font="font:MediumBoldSystemFont"
+                vertAlign="bottom"/>
+            
+           
+        </LayoutGroup>
+            
+    </children>
+</component>

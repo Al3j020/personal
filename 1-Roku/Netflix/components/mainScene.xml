@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="MainScene" extends="Scene">
+        <script type="text/brightscript" uri="mainScene.brs" /> 
+        
+        <interface>
+                <function name="displayHome" />
+                <function name="displayProfile"/>
+                <function name="displayEditProfile"/>
+                            
+        </interface>
+
+        <children>
+                <ProfileView
+                        id="profileView" />
+                <HomeView 
+                        id="homeView" />
+                <editProfileView
+                        id="editProfileView" />
+
+        </children>
+</component>

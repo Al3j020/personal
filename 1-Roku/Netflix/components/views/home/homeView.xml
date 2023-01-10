@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="HomeView" extends="Group">
+
+     <interface>
+        <field id="itemContent"  type="node"    onChange="onItemContentChanged"/>
+        <field id="focusPercent" type="float"   onChange="onItemHasFocus"/>
+     </interface>
+
+    <script type="text/brightscript" uri="homeView.brs" /> 
+
+    <children>
+
+    <Label id="label" text="Working on it"  translation="[600, 500]"/>
+
+            
+    </children>
+</component>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="editProfileView" extends="Group">
+
+     <interface>
+        <field id="itemContent"  type="node"    onChange="onItemContentChanged"/>
+        <field id="focusPercent" type="float"   onChange="onItemHasFocus"/>
+        <field id="data" type="node"/>
+        
+     </interface>
+
+    <script type="text/brightscript" uri="editProfileView.brs"/> 
+   
+    <children>
+
+<LayoutGroup
+   id="LayoutGroupRight" 
+   layoutDirection= "vert"
+   horizAlignment="left"
+   translation="[10,50]" 
+   itemSpacings="[0,20,100]">
+
+    <Label 
+      id="editLabel" 
+      text="Edit Profile"
+      color="0xFFFFFF"
+      font="font:MediumBoldSystemFont"
+      lineSpacing="1"/>
+      
+      <Label 
+      id="selectLabel" 
+      text="Select what you want to change" 
+      color="0x929292"/>
+        
+    <LabelList
+      id = "editMenu"
+      itemSize = "[600,48]" 
+      itemSpacing="[0,30]"
+      focusedColor="0x929292"
+      vertFocusAnimationStyle="floatingFocus">
+
+      <ContentNode 
+         id = "editMenuContent" 
+         role = "content" >
+         <ContentNode title = "Name" />
+         <ContentNode title = "Icon" />
+         <ContentNode title = "Language" />
+         
+         </ContentNode>
+
+   </LabelList>
+
+      <Label 
+      id="ratingLabel" 
+      text="ALL MATURITY RATINGS
+      Show titles of all maturity ratings for this profile.
+      Visit netflix.com/YourAccount to change Viewing Restrictions." 
+      color="0x929292"
+      height="200"
+      width="700"
+      wrap="true"/>
+        
+    <LabelList
+      id = "Button"
+      itemSize = "[600,48]" 
+      itemSpacing="[0,30]"
+      focusedColor="0x929292">
+      <ContentNode 
+         id = "ButtonContent" 
+         role = "content" >
+         <ContentNode title = "Done" />
+          
+         </ContentNode>
+
+   </LabelList>
+</LayoutGroup>
+
+
+<LayoutGroup
+      id="layoutGroupLeft"
+      translation="[1600,200]"
+      layoutDirection = "vert"
+      horizAlignment= "center"
+      vertAlignment = "top"
+      itemSpacings="[60]">
+
+      <Poster  
+      id="poster"
+      height="300"
+      width="300"/>
+
+      <Label 
+      id="profileLabel"/>
+
+   </LayoutGroup>
+  
+</children>
+</component>
