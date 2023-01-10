@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component name="mainScene" extends="Scene">
+    <script type="text/brightscript" uri="mainScene.brs"/>
+    <script type="text/brightscript" uri="../source/utils.brs"/>
+    <interface>
+        <field id="index" type="integer" onChange="onItemFocused" alwaysNotify="true"/>
+        
+        <field id="numRows" type="integer"/>
+        <field id="numCols" type="integer"/>
+        
+        <field id="rowIndex" type="integer" value="0" onChange="onItemIndexSet" alwaysNotify="true"/>
+        <field id="colIndex" type="integer" value="0" onChange="onItemIndexSet" alwaysNotify="true"/>
+    </interface>
+    <children>
+        <group id="group"/>
+    </children>
+</component>
