@@ -81,17 +81,6 @@ sub setGrid()
     m.top.index = m.top.numCols * m.top.rowIndex + m.top.colIndex
 end sub
 
-sub onItemIndexSet()
-    m.top.index = m.top.numCols * m.top.rowIndex + m.top.colIndex
-end sub
-
-sub onItemFocused()
-    item = m.group.getChild(m.top.index)
-    item.setFocus(true)
-    m.inputLabel.text = item.text
-    print "itemFocused: ", m.top.index, item.text
-end sub
-
 function onKeyEvent(key as string, press as boolean) as boolean
     handled = false
     if press
@@ -112,8 +101,13 @@ function onKeyEvent(key as string, press as boolean) as boolean
     return handled
 end function
 
+sub onItemIndexSet()
+    m.top.index = m.top.numCols * m.top.rowIndex + m.top.colIndex
+end sub
 
-function getBoundingRect(node as object) as object
-    return node.boundingRect()
-end function
-
+sub onItemFocused()
+    item = m.group.getChild(m.top.index)
+    item.setFocus(true)
+    m.inputLabel.text = item.text
+    print "itemFocused: ", m.top.index, item.text
+end sub
