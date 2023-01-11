@@ -1,1 +1,0 @@
-../../arm-roku-linux-gnueabi/sysroot/lib/libgomp.spec
