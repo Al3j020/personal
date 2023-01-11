@@ -29,31 +29,31 @@ sub setGrid()
 
     numPad = "123+456-789*C0=/".split("")
 
-    ' m.inputLabel = createObject("roSGNode", "customItem")
-    ' m.inputLabel.content = {
-    '     width: gridw
-    '     height: gridh * 0.2
-    '     rectColor: "#FFFFFF"
-    '     textColor: "#000000"
-    '     fontSize: gridh * 0.1
-    ' }
-    ' m.inputLabel.text = "INPUT"
-    ' m.inputLabel.translation = [ix, gridh * 0.1]
+    m.inputLabel = createObject("roSGNode", "customItem")
+    m.inputLabel.content = {
+         width: gridw
+         height: gridh * 0.2
+         rectColor: "#FFFFFF"
+         textColor: "#000000"
+         fontSize: gridh * 0.1
+    }
+    m.inputLabel.text = "INPUT"
+    m.inputLabel.translation = [ix, gridh * 0.1]
 
-    ' m.outputLabel = createObject("roSGNode", "customItem")
-    ' m.outputLabel.content = {
-    '     width: gridw
-    '     height: gridh * 0.2
-    '     text: "OUTPUT"
-    '     rectColor: "#FFFFFF"
-    '     textColor: "#000000"
-    '     fontSize: gridh * 0.1
-    ' }
-    ' m.outputLabel.text = "Output"
-    ' m.outputLabel.translation = [ix, gridh * 0.35]
+    m.outputLabel = createObject("roSGNode", "customItem")
+    m.outputLabel.content = {
+         width: gridw
+         height: gridh * 0.2
+         text: "OUTPUT"
+         rectColor: "#FFFFFF"
+         textColor: "#000000"
+         fontSize: gridh * 0.1
+    }
+    m.outputLabel.text = "Output"
+    m.outputLabel.translation = [ix, gridh * 0.35]
 
-    ' m.top.appendChild(m.inputLabel)
-    ' m.top.appendChild(m.outputLabel)
+    m.top.appendChild(m.inputLabel)
+    m.top.appendChild(m.outputLabel)
 
     for i = 0 to numItems - 1
         row = fix(i / rows)
@@ -88,7 +88,7 @@ end sub
 sub onItemFocused()
     item = m.group.getChild(m.top.index)
     item.setFocus(true)
-    ' m.inputLabel.text = item.text
+    m.inputLabel.text = item.text
     print "itemFocused: ", m.top.index, item.text
 end sub
 
